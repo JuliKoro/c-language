@@ -4,9 +4,9 @@
 
 int main(void)
 {
-  int blanks_nr = 0;
-  int tabs_nr = 0;
-  int newlines_nr = 0;
+  int blanks_nr = 0; // espacios
+  int tabs_nr = 0; // tabulaciones
+  int newlines_nr = 0; // lineas nuevas
 
   char c;
 

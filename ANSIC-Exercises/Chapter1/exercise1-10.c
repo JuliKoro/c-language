@@ -16,7 +16,7 @@ int main(void)
             putchar('\\');
             putchar('t');
         }
-        else if (c == '\b')
+        else if (c == ' ')
         {
             putchar('\\');
             putchar('b');

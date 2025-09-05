@@ -14,7 +14,7 @@ int main(void)
             if (c != last_c) putchar('\n');
         }
         
-        else putchar(c); // para imprimir os caracteres unidos y saltear los ' ', '\t' y '\n'
+        else putchar(c); // para imprimir los caracteres unidos y saltear los ' ', '\t' y '\n'
 
         last_c = c;
     }

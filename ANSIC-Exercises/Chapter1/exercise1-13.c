@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#define BUFFER = 100;
+#define BUFFER 100
 
 int main(void)
 {
@@ -33,7 +33,7 @@ int main(void)
 				if (histogram_length < word_count_index - 1) //si aparecen nuevas longitudes
 					histogram_length = word_count_index - 1;
 
-				word_count_index = 0 // reinicia el contador de letras
+				word_count_index = 0; // reinicia el contador de letras
 			}
 
 			if (c == EOF) break; //Cuando termina de ingresar palabras (Ctrl + C)
@@ -70,6 +70,22 @@ int main(void)
 
   	// Print a vertical histogram
   	printf("Vertical Histogram\n------------------\n");
+	// Vertical Histogram
+    for (i = max_word_count; i > 0; --i) // desde la frecuencia máxima hacia abajo
+    {
+        for (column_index = 0; column_index <= histogram_length; ++column_index)
+        {
+            if (histogram[column_index] >= i)
+                printf("  # ");
+            else
+                printf("    ");
+        }
+        putchar('\n');
+    }
 
-  	
+    // Imprimir los números de longitud de palabra debajo del histograma
+    for (column_index = 0; column_index <= histogram_length; ++column_index)
+        printf("%3d ", column_index + 1);
+    putchar('\n');
+
 }	
